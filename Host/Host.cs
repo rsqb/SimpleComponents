@@ -4,13 +4,7 @@ namespace Host;
 
 public class Host : IFeeder, IDogHost
 {
-    #region Fields
-
     private readonly IDog _pet = new Dog.Dog();
-
-    #endregion // =================================================================================
-    
-    #region Methods
     
     public int GiveFood()
     {
@@ -49,6 +43,4 @@ public class Host : IFeeder, IDogHost
         Console.WriteLine("Host cares for the dog's fur (combing, washing)");
         return 1;
     }
-    
-    #endregion
 }
