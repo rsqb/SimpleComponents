@@ -11,20 +11,20 @@ public class Host : IFeeder, IDogHost
         Console.WriteLine("Host is giving food to the dog");
         return 1;
     }
-
+    
     public int GiveDrink()
     {
         Console.WriteLine("Host is giving water to the dog");
         return 1;
     }
-
+    
     public int Call()
     {
         Console.WriteLine("Host is calling the dog");
         for (var i = 1; i < 3; i++)
         {
-             _pet.Run();
-             _pet.WagTail();
+            _pet.Run();
+            _pet.WagTail();
         }
         return 1;
     }
@@ -37,7 +37,7 @@ public class Host : IFeeder, IDogHost
         _pet.WagTail();
         return 1;
     }
-
+    
     public int CareForAnimalFur()
     {
         Console.WriteLine("Host cares for the dog's fur (combing, washing)");

@@ -8,6 +8,7 @@ var owner = new Host.Host();
 // Demonstrate IFeeder interface methods
 Console.WriteLine("\n--- Calling the dog ---");
 owner.Call();
+
 Console.WriteLine("\n--- Feeder actions ---");
 owner.GiveFood();
 owner.GiveDrink();
@@ -17,9 +18,10 @@ Console.WriteLine("\n--- Good owner actions ---");
 owner.CareForAnimalFur();
 owner.LeadAnimal();
 
-// Direct interaction with Dog component
+// Direct interaction with the Dog component
 Console.WriteLine("\n--- Direct dog usage ---");
 IDog directDog = new Dog.Dog();
+
 directDog.Bark();
 directDog.Growl();
 object attacker = "thief";
