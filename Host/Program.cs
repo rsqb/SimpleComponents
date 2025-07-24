@@ -1,6 +1,4 @@
-﻿#region Main loop
-
-using Dog;
+﻿using Dog;
 
 Console.WriteLine("=== .NET Components Demonstration ===");
 Console.WriteLine("Host and Dog components");
@@ -29,7 +27,5 @@ var didBite = directDog.Bite(attacker);
 Console.WriteLine($"Did the dog bite {attacker}? {(didBite == 1 ? "Yes" : "No")}");
 directDog.WagTail();
 
-Console.WriteLine("\nPress any key to exit...");
+Console.Write("\nPress any key to exit... ");
 Console.ReadKey();
-
-#endregion

@@ -2,13 +2,7 @@ namespace Dog;
 
 public class Dog : IDog
 {
-    #region Fields
-    
     private static readonly Random RandomGenerator = new();
-
-    #endregion // =================================================================================
-
-    #region Methods
     
     public void Bark() => Console.WriteLine("Woof woof!");
     public void Growl() => Console.WriteLine("Rrrrrrrrr...");
@@ -21,6 +15,4 @@ public class Dog : IDog
         Bark();
     }
     public void LiftLeg() => Console.WriteLine("Dog lifts its leg...");
-    
-    #endregion
 }
