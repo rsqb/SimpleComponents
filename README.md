@@ -1,7 +1,7 @@
 # .NET Components Example
 ![.NET](https://img.shields.io/badge/.NET-9.0-512BD4)
 ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)
-[![License](https://img.shields.io/badge/licence-MIT-blue)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 Two components demonstrating .NET component interaction:
 - **Dog.dll** - Class library implementing IDog interface
@@ -35,10 +35,10 @@ graph TB
 ```
 
 - Dependency Inversion Principle
-- **IDog interface** - Defines dog behaviours:
+- **IDog interface** - Defines dog behaviors:
     - *Core:* Bark, Growl, Bite, Run, WagTail
     - *Others:* DemandFood, LiftLeg
-- **Dog class** - Implements dog behaviours
+- **Dog class** - Implements dog behaviors
 - **IFeeder** - *Feeding responsibilities:* GiveFood, GiveDrink, Call
 - **IDogHost** - *Care responsibilities:* LeadAnimal, CareForAnimalFur
 - **Host** class implements both interfaces
