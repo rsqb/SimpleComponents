@@ -1,0 +1,50 @@
+# This workflow will build the .NET project and package artifacts
+
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.x.x
+
+    - name: Cache NuGet packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+        restore-keys: ${{ runner.os }}-nuget-
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-${{ matrix.os }}
+        path: |
+          Host/bin/Release/**/*
+          !Host/bin/Release/**/*.pdb
+        if-no-files-found: error

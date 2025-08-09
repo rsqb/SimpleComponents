@@ -11,6 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Documents", "Solut
 		LICENSE = LICENSE
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{8F512AD7-73B8-4B23-A249-62ABAB35B995}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +30,8 @@ Global
 		{AEB0FEF6-6B95-46BB-9350-DB75AA9D1F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEB0FEF6-6B95-46BB-9350-DB75AA9D1F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEB0FEF6-6B95-46BB-9350-DB75AA9D1F13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F512AD7-73B8-4B23-A249-62ABAB35B995} = {7E8BB547-FD5D-4472-8D38-4B7D3D80B640}
 	EndGlobalSection
 EndGlobal
