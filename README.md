@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 Two components demonstrating .NET component interaction:
-- **Dog.dll** - Class library implementing IDog interface
-- **Host.exe** - Console app using Dog component
+- **Dog.dll** – Class library implementing IDog interface
+- **Host.exe** – Console app using Dog component
 
 ## Architecture
 ```mermaid
@@ -35,14 +35,14 @@ graph TB
 ```
 
 - Dependency Inversion Principle
-- **IDog interface** - Defines dog behaviors:
+- **IDog interface** – Defines dog behaviors:
     - *Core:* Bark, Growl, Bite, Run, WagTail
     - *Others:* DemandFood, LiftLeg
-- **Dog class** - Implements dog behaviors
-- **IFeeder** - *Feeding responsibilities:* GiveFood, GiveDrink, Call
-- **IDogHost** - *Care responsibilities:* LeadAnimal, CareForAnimalFur
+- **Dog class** – Implements dog behaviors
+- **IFeeder** – *Feeding responsibilities:* GiveFood, GiveDrink, Call
+- **IDogHost** – *Care responsibilities:* LeadAnimal, CareForAnimalFur
 - **Host** class implements both interfaces
-- **Program** - Main entry point with demonstration
+- **Program** – Main entry point with demonstration
 
 ## Build & Run
 ```bash
