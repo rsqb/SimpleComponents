@@ -4,7 +4,9 @@ using Host;
 Console.WriteLine("=== .NET Components Demonstration ===");
 Console.WriteLine("Host and Dog components");
 
-var owner = new Host.Host();
+// Dependency Injection – Host depends on IDog interface, not concrete Dog class
+IDog dog = new Dog.Dog();
+var owner = new Host.Host(dog);
 
 // Demonstrate IFeeder interface methods
 IFeeder feeder = owner;

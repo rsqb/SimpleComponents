@@ -4,7 +4,12 @@ namespace Host;
 
 public class Host : IFeeder, IDogHost
 {
-    private readonly IDog _pet = new Dog.Dog();
+    private readonly IDog _pet;
+
+    public Host(IDog pet)
+    {
+        _pet = pet;
+    }
 
     public int GiveFood()
     {
