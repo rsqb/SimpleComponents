@@ -56,3 +56,18 @@ dotnet run --project Host
 Based on tutorial by Professor V. Giedrimas, Vilnius University *(Šiauliai Academy)*. Extended by:
 - Slightly enhanced interface design
 - Modern C# language features
+
+## Verifying Releases
+
+All releases are signed with GPG (GNU Privacy Guard) key:
+- Fingerprint: `B1FD 20DB 15EE D25F D6DE 7C93 C7CE 19DC DFD0 11BD`
+- Public key: [PUBLIC_KEY.asc](PUBLIC_KEY.asc) or  [Gist](https://gist.github.com/rsqb/1bd8693e60027034031efade3c6ac95d)
+
+### To verify:
+```bash
+# Import key
+curl -L https://gist.github.com/rsqb/1bd8693e60027034031efade3c6ac95d/raw | gpg --import
+
+# Verify signature
+gpg --verify <release>.asc <release>
+```

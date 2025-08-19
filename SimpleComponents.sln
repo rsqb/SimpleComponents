@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Documents", "Solut
 		README.md = README.md
 		.gitignore = .gitignore
 		LICENSE = LICENSE
+		PUBLIC_KEY.asc = PUBLIC_KEY.asc
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{8F512AD7-73B8-4B23-A249-62ABAB35B995}"
